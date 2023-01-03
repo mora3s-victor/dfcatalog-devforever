@@ -1,4 +1,4 @@
-package com.devforever.catalog.resourcers;
+package com.devforever.catalog.resources;
 
 import java.net.URI;
 

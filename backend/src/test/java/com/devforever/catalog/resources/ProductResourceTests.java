@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
 import com.devforever.catalog.dto.ProductDTO;
-import com.devforever.catalog.resourcers.ProductResource;
+import com.devforever.catalog.resources.ProductResource;
 import com.devforever.catalog.services.ProductService;
 import com.devforever.catalog.services.exceptions.DatabaseException;
 import com.devforever.catalog.services.exceptions.ResourceNotFoundException;
