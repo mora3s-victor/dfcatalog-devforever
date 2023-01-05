@@ -8,12 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devforever.catalog.dto.ProductDTO;
 import com.devforever.catalog.repositories.ProductRepository;
 import com.devforever.catalog.services.exceptions.ResourceNotFoundException;
-
-import jakarta.transaction.Transactional;
 
 @SpringBootTest
 @Transactional//NOS TESTES TRANSACIONAIS, APÓS CADA TESTE É FEITO UM ROLLBACK NO BANCO, DEIXANDO CADA TESTE INDEPENDENTE UM DO OUTRO

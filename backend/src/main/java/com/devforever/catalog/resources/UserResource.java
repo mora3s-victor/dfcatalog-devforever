@@ -2,6 +2,8 @@ package com.devforever.catalog.resources;
 
 import java.net.URI;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,8 +22,6 @@ import com.devforever.catalog.dto.UserDTO;
 import com.devforever.catalog.dto.UserInsertDTO;
 import com.devforever.catalog.dto.UserUpdateDTO;
 import com.devforever.catalog.services.UserService;
-
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/users")

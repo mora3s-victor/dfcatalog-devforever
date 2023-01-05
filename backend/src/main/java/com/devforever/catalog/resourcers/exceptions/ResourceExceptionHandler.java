@@ -2,6 +2,8 @@ package com.devforever.catalog.resourcers.exceptions;
 
 import java.time.Instant;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -11,8 +13,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.devforever.catalog.services.exceptions.DatabaseException;
 import com.devforever.catalog.services.exceptions.ResourceNotFoundException;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 @ControllerAdvice	//ESSA CLASSE INTERCEPTA EXCEÇÕES NA CAMADA DE RESOURCE
 public class ResourceExceptionHandler {

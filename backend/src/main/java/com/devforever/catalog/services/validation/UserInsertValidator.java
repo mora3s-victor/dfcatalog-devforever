@@ -3,15 +3,15 @@ package com.devforever.catalog.services.validation;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.devforever.catalog.dto.UserInsertDTO;
 import com.devforever.catalog.entities.User;
 import com.devforever.catalog.repositories.UserRepository;
 import com.devforever.catalog.resourcers.exceptions.FieldMessage;
-
-import jakarta.validation.ConstraintValidator;
-import jakarta.validation.ConstraintValidatorContext;
 
 public class UserInsertValidator implements ConstraintValidator<UserInsertValid, UserInsertDTO> {
 

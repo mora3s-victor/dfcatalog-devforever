@@ -2,6 +2,8 @@ package com.devforever.catalog.services;
 
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -18,8 +20,6 @@ import com.devforever.catalog.repositories.CategoryRepository;
 import com.devforever.catalog.repositories.ProductRepository;
 import com.devforever.catalog.services.exceptions.DatabaseException;
 import com.devforever.catalog.services.exceptions.ResourceNotFoundException;
-
-import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class ProductService {
@@ -56,7 +56,7 @@ public class ProductService {
 	public ProductDTO update(Long id, ProductDTO dto) {
 		try {
 
-			Product entity = repository.getReferenceById(id);
+			Product entity = repository.getOne(id);
 			copyDtoToEntity(dto,entity);
 			entity = repository.save(entity);
 			return new ProductDTO(entity);
@@ -87,7 +87,7 @@ public class ProductService {
 		entity.getCategories().clear();
 		
 		for(CategoryDTO catDTO : dto.getCategories()) {
-			Category category = categoryRepository.getReferenceById(catDTO.getId());
+			Category category = categoryRepository.getOne(catDTO.getId());
 			entity.getCategories().add(category);
 		}
 		
