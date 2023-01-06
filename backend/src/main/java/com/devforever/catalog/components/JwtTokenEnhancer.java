@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import com.devforever.catalog.entities.User;
 import com.devforever.catalog.repositories.UserRepository;
 
-@Component
+@Component //CLASSE PARA ADICIONAR INFORMAÇÕES ADICIONAIS NO TOKEN, EX ID E NOME
 public class JwtTokenEnhancer implements TokenEnhancer{
 
 	@Autowired
